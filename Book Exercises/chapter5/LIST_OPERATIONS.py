@@ -22,7 +22,7 @@ max([1, 2, "three"]);
 print(min(['a', 'b', 'c']))
 # Return 'a'
 
-#print(max([1, 2, 'three']))
+print(max([1, 2, 'three']))
 # Return Error (typeError: '>' not supported between instances of 'str' and 'int')
 
 print([1, 2, 3].count('one'))

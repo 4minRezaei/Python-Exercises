@@ -25,38 +25,43 @@ a * c
 'HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello'
 
 b + d
-Traceback (most recent call last):
-  File "<pyshell#12>", line 1, in <module>
-    b + d
-TypeError: can only concatenate str (not "float") to str
+# output: Traceback (most recent call last):
+#   File "<pyshell#12>", line 1, in <module>
+#     b + d
+# TypeError: can only concatenate str (not "float") to str
 
 b + c
-Traceback (most recent call last):
-  File "<pyshell#13>", line 1, in <module>
-    b + c
-TypeError: can only concatenate str (not "int") to str
+# output: Traceback (most recent call last):
+#   File "<pyshell#13>", line 1, in <module>
+#     b + c
+# TypeError: can only concatenate str (not "int") to str
 
 e * c
 (68+119j)
 
 # Load the math module and try a few of the functions.
 import math
-e
-(4+7j)
 math.e
 2.718281828459045
 
 c + (2^math.e)
-Traceback (most recent call last):
-  File "<pyshell#19>", line 1, in <module>
-    c + (2^math.e)
-TypeError: unsupported operand type(s) for ^: 'int' and 'float'
+# output:Traceback (most recent call last):
+#   File "<pyshell#19>", line 1, in <module>
+#     c + (2^math.e)
+# TypeError: unsupported operand type(s) for ^: 'int' and 'float'
 
 c + (2.0^math.e)
-Traceback (most recent call last):
-  File "<pyshell#20>", line 1, in <module>
-    c + (2.0^math.e)
-TypeError: unsupported operand type(s) for ^: 'float' and 'float'
+# output: Traceback (most recent call last):
+#   File "<pyshell#20>", line 1, in <module>
+#     c + (2.0^math.e)
+# TypeError: unsupported operand type(s) for ^: 'float' and 'float'
 
 c + (2^int(math.e))
 17
+
+import cmath
+val = cmath.phase(c)
+# output: 0.0
+
+val = cmath.phase(4+7j)
+# output: 1.0516502125483738
